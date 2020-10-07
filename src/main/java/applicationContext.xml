@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       
+<!--       <bean id = "myCoach" -->
+<!--        		class = "com.sagarika.spring.Sports.BaseballCoach"> 	 -->
+<!--        </bean>   -->
+       
+       
+       
+                              <!-- DEPENDENCY INJECTION BY USING CONSTRUCTOR -->
+                              
+			<!-- defining the dependency -->			
+<!--        <bean id ="myFortuneService" -->
+<!--        		class ="com.sagarika.spring.Sports.HappyFortuneService"> -->
+<!--        </bean> -->
+        
+		<!-- passing the dependency -->
+<!--        <bean id = "myCoach" -->
+<!--        		class = "com.sagarika.spring.Sports.BaseballCoach">  -->
+<!--        		<constructor-arg ref = "myFortuneService" />		 -->
+<!--        </bean>  -->
+       
+<!--        <bean id = "myCoach" -->
+<!--        		class = "com.sagarika.spring.Sports.TrackCoach"> -->
+<!--        		<constructor-arg ref = "myFortuneService" /> -->
+<!--        </bean> -->
+     
+       
+       
+							<!--DEPENDENCY INJECTION BY USING SETTER METHOD -->
+
+<!-- 			 defining the dependency -->
+<!-- 			<bean id ="myFortuneService" -->
+<!-- 				class = "com.sagarika.spring.Sports.HappyFortuneService"> -->
+<!-- 			</bean> -->
+			
+<!-- 			 passing the dependency --> 
+<!-- 			<bean id = "myCoach" -->
+<!-- 				class = "com.sagarika.spring.Sports.CricketCoach"> -->
+<!-- 				<property name = "fortuneServices" ref = "myFortuneService"  /> -->
+<!-- 			</bean> -->
+			
+			
+			
+							<!-- INJECTING LITERAL VALUE -->
+			<!-- defining the dependency -->
+			<bean id ="myFortuneService"
+				class = "com.sagarika.spring.Sports.HappyFortuneService">
+			</bean>
+			
+			<!-- passing the dependency -->
+			<bean id = "myCricketCoach"
+				class = "com.sagarika.spring.Sports.CricketCoach">
+				
+			<!-- inject literal values -->
+				<property name="email" value="abc.com" />
+				<property name="team" value ="kkr"/>
+				<property name = "fortuneServices" ref = "myFortuneService"  />
+			</bean>
+       
+        
+</beans>
