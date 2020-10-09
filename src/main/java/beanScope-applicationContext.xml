@@ -8,26 +8,26 @@
        
       						 <!--	 SINGLETON SCOPE 	-->
 <!--        defining the dependency -->
-<!-- 			<bean id ="myFortuneService" -->
-<!-- 				class = "com.sagarika.spring.Sports.HappyFortuneService"> -->
-<!-- 			</bean> -->
+ 			<bean id ="myFortuneService" 
+ 				class = "com.sagarika.spring.Sports.HappyFortuneService"> 
+ 			</bean> 
 			
-<!-- 			<bean id = "myCoach" -->
-<!--    		         class = "com.sagarika.spring.Sports.TrackCoach"> -->
-<!--      		<constructor-arg ref = "myFortuneService" />  -->
-<!--         </bean>  -->
+ 			<bean id = "myCoach"
+    		         class = "com.sagarika.spring.Sports.TrackCoach"> 
+      		<constructor-arg ref = "myFortuneService" />  
+         </bean>  
 
 
 
 							<!--    PROTOTYPE SCOPE    -->
 		<!-- defining the dependency -->				
-			<bean id ="myFortuneService" 
-					class = "com.sagarika.spring.Sports.HappyFortuneService"> 
- 			</bean> 
+<!-- 			<bean id ="myFortuneService"  -->
+<!-- 					class = "com.sagarika.spring.Sports.HappyFortuneService">  -->
+<!--  			</bean>  -->
 			
-			<bean id = "myCoach"
-    		         class = "com.sagarika.spring.Sports.TrackCoach"
-    		         scope = "prototype"> 
-      		<constructor-arg ref = "myFortuneService" />  
-         </bean>  	
- </beans>
+<!-- 			<bean id = "myCoach" -->
+<!--     		         class = "com.sagarika.spring.Sports.TrackCoach" -->
+<!--     		         scope = "prototype">  -->
+<!--       		<constructor-arg ref = "myFortuneService" />   -->
+<!--          </bean>  	 -->
+ </beans> 
